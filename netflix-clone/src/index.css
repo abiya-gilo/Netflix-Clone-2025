@@ -1,13 +1,27 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Import Inter and Lexend fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Define reusable CSS variables at the root level */
+:root {
+  --font-base: 'Lexend', sans-serif;       /* Primary font */
+  --font-second-base: 'Inter', sans-serif; /* Secondary font */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Apply global styles */
+body {
+  font-family: var(--font-base); /* Use Lexend by default */
+  background-color: #000;        /* Netflix black background */
+  color: #fff;                   /* White text */
+}
+
+/* Example usage of secondary font */
+h1, h2, h3 {
+  font-family: var(--font-second-base); /* Use Inter for headings */
 }

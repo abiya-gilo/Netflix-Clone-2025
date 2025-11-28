@@ -1,0 +1,50 @@
+.netflix-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #141414;
+  padding: 15px 30px;
+}
+
+.header-left .netflix-logo {
+  height: 40px;
+}
+
+.header-center .nav-list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.header-center .nav-list li {
+  color: white;
+  cursor: pointer;
+}
+
+.header-center .nav-list li:hover {
+  color: #e50914;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: white;
+}
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header-right .icon {
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.header-right .icon:hover {
+  color: #e50914; /* Netflix red on hover */
+}
