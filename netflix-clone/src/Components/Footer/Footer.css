@@ -56,3 +56,11 @@
   color: white;
   border-color: white;
 }
+.footer-socials a {
+  color: inherit; /* keep icon color */
+  text-decoration: none;
+}
+
+.footer-socials a:hover .social-icon {
+  color: #e50914; /* Netflix red on hover */
+}
