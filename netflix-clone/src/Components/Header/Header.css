@@ -30,7 +30,7 @@
 .header-right {
   display: flex;
   align-items: center;
-  gap: 15px;
+  /* gap: 15px; */
   color: white;
 }
 .header-right {

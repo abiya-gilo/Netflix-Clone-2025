@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Header.css";
 import logo from "../../assets/Netflix_Logo_RGB.png";
 
@@ -9,10 +9,33 @@ import AccountBoxIcon from "@mui/icons-material/AccountBox";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
 function Header() {
+  // State for toggling search bar
+  const [showSearch, setShowSearch] = useState(false);
+
+  // State for toggling account dropdown
+  const [showAccountMenu, setShowAccountMenu] = useState(false);
+
+  const handleLogoClick = () => {
+    console.log("Logo clicked → navigate to Home");
+    // If using React Router: navigate("/");
+  };
+
+  const handleSearchClick = () => {
+    setShowSearch(!showSearch);
+  };
+
+  const handleNotificationsClick = () => {
+    alert("No new notifications!");
+  };
+
+  const handleAccountClick = () => {
+    setShowAccountMenu(!showAccountMenu);
+  };
+
   return (
     <div className="netflix-header">
       {/* Left: Logo */}
-      <div className="header-left">
+      <div className="header-left" onClick={handleLogoClick}>
         <img src={logo} alt="Netflix Logo" className="netflix-logo" />
       </div>
 
@@ -30,11 +53,29 @@ function Header() {
 
       {/* Right: Icons */}
       <div className="header-right">
-        <SearchIcon className="icon" />
-        <NotificationsNoneIcon className="icon" />
-        <AccountBoxIcon className="icon" />
-        <ArrowDropDownIcon className="icon" />
+        <SearchIcon className="icon" onClick={handleSearchClick} />
+        <NotificationsNoneIcon className="icon" onClick={handleNotificationsClick} />
+        <AccountBoxIcon className="icon" onClick={handleAccountClick} />
+        <ArrowDropDownIcon className="icon" onClick={handleAccountClick} />
       </div>
+
+      {/* Conditional Search Bar */}
+      {showSearch && (
+        <div className="search-bar">
+          <input type="text" placeholder="Search movies, TV shows..." />
+        </div>
+      )}
+
+      {/* Conditional Account Dropdown */}
+      {showAccountMenu && (
+        <div className="account-menu">
+          <ul>
+            <li>Profile</li>
+            <li>Settings</li>
+            <li>Logout</li>
+          </ul>
+        </div>
+      )}
     </div>
   );
 }

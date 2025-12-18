@@ -1,16 +1,8 @@
-// 1. Import React and hooks
+
 import React, { useEffect, useState } from "react";
-
-// 2. Import axios instance (configured for TMDB API)
 import axios from "../../../utils/axios";
-
-// 3. Import CSS for styling this component
-import "./Row.css";
-
-// 4. Import movie-trailer package (finds YouTube trailers by movie name)
+import "./row.css";
 import movieTrailer from "movie-trailer";
-
-// 5. Import YouTube component (embeds YouTube videos in React)
 import YouTube from "react-youtube";
 
 // 6. Define the Row component, receiving props:
